@@ -39,3 +39,12 @@ console.log(markBMI);
 console.log(markHigherBMI);
 
 //Jonas Schmedtmann's Code
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 95;
+const heightJohn = 1.88;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const isMarkBMIHigher = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, isMarkBMIHigher);
