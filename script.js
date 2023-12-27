@@ -76,3 +76,10 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+
+///////////////////////////////////////////////
+// Type Conversion and Coercion
+
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
