@@ -83,3 +83,76 @@ console.log(century);
 const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear) + 18);
+
+console.log(Number("Jonas"));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// in javascript, we can only convert to string, number and boolean
+
+console.log("I am " + 25 + " years old");
+console.log("23" - "10" - 3);
+console.log("23" / "2");
+console.log("23" > "18");
+
+let n = "1" + 1; // converts to '11' string because of the plus operator
+n = n - 1; // then converts to 11 number because of the minus operator
+console.log(n); // eventual answer is 10
+
+console.log(2 + 3 + 4 + "5");
+console.log("10" - "4" - "3" - 2 + "5");
+
+///////////////////////////////////////////////
+// Truthy and Falsy Values
+// Falsy values are not exactly false value but will...
+// ... become false when we try to convert them into a boolean.
+// 5 falsy values in JS: 0, '' (empty string), undefined, null, NaN
+// everything else are so-called truthy values i.e values that will be converted to true.
+// for example, any number that's not zero or any string that's not empty
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+// this will return false, because the falsy value 0 is being converted to a boolean
+const money = 0;
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job!");
+}
+
+// this will return true, because 100 is a truthy value
+const funds = 100;
+if (funds) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job!");
+}
+
+//this will return false, because height wasn't assigned a value and it's undefined which is a falsy value
+let height;
+if (height) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("Height is UNDEFINED");
+}
+
+//this will return true, because height is assigned a value and it's a truthy value
+height = 10;
+if (height) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("Height is UNDEFINED");
+}
+
+//this will return false, because height was assigned a 0 value and 0 a falsy value.
+height = 0;
+if (height) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("Height is UNDEFINED");
+}
