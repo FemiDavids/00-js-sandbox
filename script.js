@@ -2,4 +2,9 @@ const courseTitle = "Javascript Fundamentals";
 console.log(courseTitle);
 
 ////////////////////////////////////////////
-// Basic Operator
+// Values and Variables
+
+let firstName = "Jonas";
+console.log(firstName);
+
+let lastName; //camelCase
