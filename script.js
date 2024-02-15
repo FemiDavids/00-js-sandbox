@@ -127,7 +127,6 @@ const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
 console.log(jonasNew);
 
 console.log(`Just a regular string`);
-*/
 
 ////////////////////////////////////////////
 // taking decisions 'if' & 'else' statements
@@ -151,3 +150,140 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+
+////////////////////////////////////////////
+// type conversion and coercion
+
+//type conversion
+const inputYear = "1991";
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+console.log(Number(inputYear), inputYear);
+
+//type coercion
+console.log("I am " + 23 + " years old");
+//the plus '+' operator implicitly converts the number...
+// ...to a string to execute the operation
+
+// not all operator converts number to strings...
+// ... '-' & '*' will convert strings to numbers to execute the operation
+console.log("23" - "10" - 3);
+console.log("23" / "2");
+console.log("23" > "18");
+
+let n = "1" + 1;
+n = n - 1;
+console.log(n);
+
+console.log(2 + 3 + 4 + "5");
+console.log("10" - "4" - "3" - 2 + "5");
+
+////////////////////////////////////////////
+// truthy and falsy values
+
+//5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+let money = 0; //since money = 0, it is a falsy value and in the boolean context will be converted to false.
+if (money) {
+  console.log(`Don't spend all of your ${money}. Save some.`);
+} else {
+  console.log(`You should get a job! You have ${money} in your bank account`);
+}
+
+money = 100; //since money = 100, it is a truthy value and in the boolean context will be converted to true.
+if (money) {
+  console.log(`Don't spend all of your ${money}. Save some.`);
+} else {
+  console.log(`You should get a job! You have ${money} in your bank account`);
+}
+
+let height; //since height variable is not defined(undefined), it is a falsy value and in the boolean context will be converted to false.
+if (height) {
+  console.log(`Yay! Height is defined`);
+} else {
+  console.log("Height is UNDEFINED");
+}
+
+////////////////////////////////////////////
+// equality operators 
+
+// example 1
+let age = 18;
+if (age === 18) {
+  console.log(`You just became an adult (strict)`);
+} else {
+  console.log(`You still have some years left to become an adult`);
+}
+
+if (age == 18) console.log(`You just became an adult (loose)`);
+
+// example 2
+age = "18";
+if (age === 18) {
+  console.log(`You just became an adult (strict)`);
+} else {
+  console.log(`You still have some years left to become an adult`);
+}
+if (age == 18) console.log(`You just became an adult (loose)`);
+
+example 3
+let favourite = prompt(`What's your favorite number?`);
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite == 23) {
+  console.log(`Cool! 23 is an amazing number`);
+}
+
+let favourite = Number(prompt(`What's your favorite number?`));
+if (favourite === 23) {
+  console.log(`Cool! 23 is an amazing number`);
+} else if (favourite === 13) {
+  console.log(`Cool! 13 is also an amazing number`);
+} else {
+  console.log(`Number is not 23 or 13`);
+}
+
+let lucky = Number(prompt(`What's your lucky number?`));
+if (lucky === 5) {
+  console.log(`Wow! 5? that's a lucky number.`);
+} else if (lucky !== 5) {
+  console.log(`Why not 5?`);
+}
+*/
+
+////////////////////////////////////////////
+// boolean logic/logical operators
+
+let hasDriversLicense = true; // A
+let hasGoodVision = false; // B
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+hasDriversLicense = true;
+hasGoodVision = true;
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+
+if (hasDriversLicense && hasGoodVision) {
+  console.log(`Sarah is able to drive`);
+} else {
+  console.log(`Someone else should drive`);
+}
+
+let isTired = false; // C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log(`Sarah is able to drive`);
+} else {
+  console.log(`Someone else should drive`);
+}
