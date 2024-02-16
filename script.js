@@ -256,7 +256,6 @@ if (lucky === 5) {
 } else if (lucky !== 5) {
   console.log(`Why not 5?`);
 }
-*/
 
 ////////////////////////////////////////////
 // boolean logic/logical operators
@@ -287,3 +286,54 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log(`Someone else should drive`);
 }
+
+////////////////////////////////////////////
+// the switch statement
+
+const day = prompt("Type in a weekday");
+
+switch (day) {
+  case "monday": //day === 'monday'
+    console.log(`plan course structure`);
+    console.log(`go to coding meetup`);
+    alert(`monday - plan course structure and go to coding meetup`);
+    break;
+    case "tuesday":
+      console.log(`prepare theory videos`);
+      break;
+      case "wednesday":
+        case "thursday":
+          console.log(`write code examples`);
+          break;
+          case "friday":
+            console.log(`record videos`);
+            break;
+            case "saturday":
+              case "sunday":
+    console.log(`enjoy the weekend`);
+    break;
+  default:
+    console.log(`not a valid day!`);
+}
+
+// alternativelly using if/else statement
+let chooseDay = prompt("Type in a weekday");
+
+if (chooseDay === "monday") {
+  console.log(`plan course structure`);
+  console.log(`go to coding meetup`);
+} else if (chooseDay === "tuesday") {
+  console.log(`prepare theory videos`);
+} else if (chooseDay === "wednesday" || chooseDay === "thursday") {
+  console.log(`write code examples`);
+} else if (chooseDay === "friday") {
+  console.log(`record videos`);
+} else if (chooseDay === "saturday" || chooseDay === "sunday") {
+  console.log(`enjoy the weekend`);
+} else {
+  console.log(`not a valid day!`);
+}
+*/
+
+////////////////////////////////////////////
+// statements and expressions
