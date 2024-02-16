@@ -337,3 +337,42 @@ if (chooseDay === "monday") {
 
 ////////////////////////////////////////////
 // statements and expressions
+
+// expression is any piece of code that produces a value
+// these are examples:
+3 + 4;
+1991;
+true && false && !false;
+
+//statements are bigger pieces of codes that is...
+//...executed which does not produce a value on it's own
+// this is an example of a statement:
+if (23 > 10) {
+  const str = "23 is bigger";
+}
+
+////////////////////////////////////////////
+// the conditional ternary operator
+
+const age = 23;
+// a ternary operation
+age >= 18
+  ? console.log(`i like to drink wine`)
+  : console.log(`i like to drink water`);
+
+// conditionally declared variable using a ternary operation
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+//compared to an if/else statement
+let drink2;
+
+if (age >= 18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
+}
+console.log(drink2);
+
+//using the ternary operator to declare conditions in a template literal
+console.log(`I like to drink ${age >= 18 ? "wine" : "water"} `);
