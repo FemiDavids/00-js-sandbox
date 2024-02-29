@@ -1,3 +1,5 @@
+"use strict";
+
 const courseTitle = "Javascript Fundamentals";
 console.log(courseTitle);
 
@@ -333,7 +335,7 @@ if (chooseDay === "monday") {
 } else {
   console.log(`not a valid day!`);
 }
-*/
+
 
 ////////////////////////////////////////////
 // statements and expressions
@@ -376,3 +378,29 @@ console.log(drink2);
 
 //using the ternary operator to declare conditions in a template literal
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"} `);
+
+*/
+
+////////////////////////////////////////////
+// functions
+
+function logger() {
+  console.log("My name is Jonas");
+}
+
+// calling / running / invoking function
+logger();
+logger();
+logger();
+
+function fruitProcessor(apples, oranges) {
+  // console.log(apples, oranges);
+  const juice = `Juice with ${apples} appples and ${oranges} oranges.`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
