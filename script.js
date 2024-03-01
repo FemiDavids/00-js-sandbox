@@ -379,7 +379,6 @@ console.log(drink2);
 //using the ternary operator to declare conditions in a template literal
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"} `);
 
-*/
 
 ////////////////////////////////////////////
 // functions
@@ -436,3 +435,22 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob"));
+
+*/
+
+////////////////////////////////////////////
+// functions calling other function
+
+const cutPieces = function (fruit) {
+  return fruit * 4;
+};
+
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of oranges.`;
+  return juice;
+};
+
+console.log(fruitProcessor(2, 3));
