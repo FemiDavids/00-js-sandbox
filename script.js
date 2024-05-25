@@ -113,6 +113,7 @@ console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 
+*/
 ////////////////////////////////////////////
 // strings and template literals
 
@@ -121,15 +122,26 @@ const job = "teacher";
 const birthYear = 1991;
 const year = 2037;
 
+// string concatenation
 const jonas =
-"I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
 console.log(jonas);
 
+// template literals
 const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
 console.log(jonasNew);
 
 console.log(`Just a regular string`);
 
+// getting characters
+console.log(firstName[0]);
+console.log(firstName.length);
+
+// string methods - functions associated with strings
+
+//method is a function associated with a particular datatype or object
+
+/*
 ////////////////////////////////////////////
 // taking decisions 'if' & 'else' statements
 
